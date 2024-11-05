@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+ 
+  - name: src_table
+    schema: RAW
+    database: "{% if target.database == 'DBT_DEV' -%} DBT_RAW{% elif target.database == 'DBT_TEST' -%} DBT_RAW{% elif target.database == 'DBT_PROD' -%} DBT_RAW
+                {% else -%} INVALID_DATABASE{% endif -%}"
+    tables:
+      - name: EMPLOYEES
+        identifier: EMPLOYEES
