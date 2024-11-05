@@ -1,0 +1,7 @@
+SELECT
+
+'1'         AS EMP_ID,
+'RAVI'      AS EMP_NAME,
+'24'        AS AGE,
+'20000'     AS SALARY,
+'DEVELOP'   AS DEPARTMENT
